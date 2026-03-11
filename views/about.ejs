@@ -1,0 +1,104 @@
+<%- include('partials/header') %>
+
+<section class="min-h-[60vh] pt-40 pb-20 relative bg-light flex flex-col justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-mesh opacity-50"></div>
+    <div class="container mx-auto px-6 lg:px-12 relative z-10 gsap-reveal">
+        <h1 class="text-6xl md:text-8xl font-display font-bold text-dark tracking-tight mb-6">About <span class="text-gradient">Nepsis</span></h1>
+        <p class="text-xl text-slate-600 max-w-2xl leading-relaxed mb-10">
+            We are a collective of engineers, designers, and strategists driven by the singular goal of <strong>"Engineering the Future"</strong>. Based in Gurugram, India, we partner with global enterprises to solve complex challenges through technology.
+        </p>
+        <div class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-dark text-white font-medium">
+            <i data-lucide="map-pin" class="w-5 h-5 text-brand-400"></i> Pataudi, Gurugram, Haryana
+        </div>
+    </div>
+</section>
+
+<section class="py-24 bg-white relative">
+    <div class="container mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+            <div class="gsap-reveal order-2 md:order-1 relative">
+                <!-- Abstract visual representation -->
+                <div class="aspect-square rounded-[3rem] bg-gradient-to-br from-brand-100 to-indigo-50 overflow-hidden relative border border-brand-200">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.2)_0,transparent_50%)] animate-pulse"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                         <div class="w-48 h-48 rounded-full bg-white/40 backdrop-blur-md shadow-soft flex items-center justify-center border border-white/60 z-10 animate-[spin_10s_linear_infinite]">
+                             <i data-lucide="cpu" class="w-20 h-20 text-brand-600"></i>
+                         </div>
+                         <!-- orbiting elements -->
+                         <div class="absolute w-72 h-72 border border-brand-300 rounded-full animate-[spin_15s_linear_infinite_reverse]">
+                              <div class="absolute -top-3 left-1/2 w-6 h-6 rounded-full bg-indigo-500 shadow-glow"></div>
+                         </div>
+                         <div class="absolute w-96 h-96 border border-indigo-200 rounded-full animate-[spin_20s_linear_infinite]">
+                              <div class="absolute top-1/2 -right-3 w-6 h-6 rounded-full bg-sky-400 shadow-glow"></div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gsap-reveal order-1 md:order-2">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-dark mb-8">Our Vision & Process</h2>
+                <div class="space-y-6 text-lg text-slate-600 leading-relaxed mb-10">
+                    <p>At Nepsis Technologies, we don't just write code. We architect scalable solutions that serve as the foundation for our clients' success. We believe in building systems that are robust, secure, and ready to handle tomorrow's scale today.</p>
+                    <p>Our agile methodology ensures transparency, rapid iteration, and alignment with business objectives at every step of the development lifecycle.</p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="p-6 rounded-3xl bg-slate-50 border border-slate-100">
+                        <div class="text-4xl font-display font-bold text-brand-600 mb-2">99.9%</div>
+                        <div class="text-sm font-semibold text-slate-700 uppercase tracking-wider">Uptime Delivered</div>
+                    </div>
+                    <div class="p-6 rounded-3xl bg-slate-50 border border-slate-100">
+                        <div class="text-4xl font-display font-bold text-indigo-600 mb-2">50+</div>
+                        <div class="text-sm font-semibold text-slate-700 uppercase tracking-wider">Enterprise Clients</div>
+                    </div>
+                    <div class="p-6 rounded-3xl bg-slate-50 border border-slate-100">
+                        <div class="text-4xl font-display font-bold text-purple-600 mb-2">Agile</div>
+                        <div class="text-sm font-semibold text-slate-700 uppercase tracking-wider">Methodology</div>
+                    </div>
+                    <div class="p-6 rounded-3xl bg-slate-50 border border-slate-100">
+                        <div class="text-4xl font-display font-bold text-sky-600 mb-2">24/7</div>
+                        <div class="text-sm font-semibold text-slate-700 uppercase tracking-wider">Support</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="py-24 bg-dark relative overflow-hidden text-white">
+    <div class="absolute inset-0 bg-mesh-dark"></div>
+    <div class="container mx-auto px-6 lg:px-12 relative z-10">
+        <h2 class="text-4xl md:text-5xl font-display font-bold text-center mb-16 gsap-reveal">Core Values</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 gsap-stagger-container">
+            <div class="gsap-stagger-item p-8 rounded-3xl glass-dark">
+                <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6">
+                    <i data-lucide="zap" class="w-6 h-6 text-brand-400"></i>
+                </div>
+                <h3 class="text-2xl font-display font-bold mb-4">Innovation First</h3>
+                <p class="text-slate-400">We constantly explore bleeding-edge technologies to provide our clients with a competitive advantage.</p>
+            </div>
+
+            <div class="gsap-stagger-item p-8 rounded-3xl glass-dark">
+                <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6">
+                    <i data-lucide="shield" class="w-6 h-6 text-emerald-400"></i>
+                </div>
+                <h3 class="text-2xl font-display font-bold mb-4">Uncompromising Quality</h3>
+                <p class="text-slate-400">From code architecture to UI design, we maintain the highest standards of excellence in everything we build.</p>
+            </div>
+
+            <div class="gsap-stagger-item p-8 rounded-3xl glass-dark">
+                <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6">
+                    <i data-lucide="users" class="w-6 h-6 text-purple-400"></i>
+                </div>
+                <h3 class="text-2xl font-display font-bold mb-4">True Partnership</h3>
+                <p class="text-slate-400">We view ourselves as an extension of your team, deeply invested in the long-term success of your business.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

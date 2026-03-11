@@ -1,0 +1,100 @@
+<%- include('partials/header') %>
+
+<section class="min-h-screen pt-32 pb-20 relative overflow-hidden flex items-center justify-center bg-mesh">
+    <!-- Overlay to soften the mesh background -->
+    <div class="absolute inset-0 bg-white/40 backdrop-blur-[2px]"></div>
+
+    <div class="container mx-auto px-6 lg:px-12 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-fade-in-up" style="animation-delay: 0.1s;">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-sm font-medium text-slate-700">System Status: All Services Operational</span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-display font-bold tracking-tight text-dark mb-6 leading-tight animate-fade-in-up" style="animation-delay: 0.2s;">
+                Engineering the <span class="text-gradient">Future</span> of Digital Architecture.
+            </h1>
+
+            <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in-up" style="animation-delay: 0.3s;">
+                Nepsis Technologies is a premium IT agency based in Gurugram. We build scalable web applications, robust cloud infrastructure, and intelligent AI solutions.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style="animation-delay: 0.4s;">
+                <a href="/contact" class="magnetic w-full sm:w-auto px-8 py-4 rounded-full bg-dark text-white font-medium text-lg hover:bg-brand-600 transition-all shadow-lg hover:shadow-brand-500/30 flex items-center justify-center">
+                    Start a Project <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                </a>
+                <a href="/portfolio" class="magnetic w-full sm:w-auto px-8 py-4 rounded-full glass text-dark font-medium text-lg hover:bg-white transition-all shadow-soft flex items-center justify-center">
+                    View Portfolio
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Capabilities Section -->
+<section class="py-24 bg-white relative z-20">
+    <div class="container mx-auto px-6 lg:px-12">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gsap-reveal">
+            <div class="max-w-2xl">
+                <h2 class="text-4xl font-display font-bold text-dark mb-4">Core Capabilities</h2>
+                <p class="text-slate-600 text-lg">We combine strategic thinking with deep technical expertise to deliver solutions that drive business growth.</p>
+            </div>
+            <a href="/services" class="hidden md:inline-flex items-center text-brand-600 font-semibold hover:text-brand-700 transition-colors mt-6 md:mt-0 group">
+                All Services <i data-lucide="arrow-right" class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 gsap-stagger-container">
+            <!-- Card 1 -->
+            <div class="gsap-stagger-item group p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-soft transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <i data-lucide="code-2" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-2xl font-display font-bold text-dark mb-3">Web Architecture</h3>
+                <p class="text-slate-600 mb-6 line-clamp-3">Modern, scalable, and secure web applications built with cutting-edge frameworks like React, Node.js, and Next.js.</p>
+                <a href="/services" class="inline-flex items-center text-sm font-semibold text-dark group-hover:text-brand-600 transition-colors">
+                    Explore <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="gsap-stagger-item group p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-soft transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <i data-lucide="cloud" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-2xl font-display font-bold text-dark mb-3">Cloud Solutions</h3>
+                <p class="text-slate-600 mb-6 line-clamp-3">Robust cloud infrastructure design, migration, and management on AWS, Google Cloud, and Azure.</p>
+                <a href="/services" class="inline-flex items-center text-sm font-semibold text-dark group-hover:text-indigo-600 transition-colors">
+                    Explore <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="gsap-stagger-item group p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-soft transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <i data-lucide="cpu" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-2xl font-display font-bold text-dark mb-3">AI & Data</h3>
+                <p class="text-slate-600 mb-6 line-clamp-3">Intelligent solutions integrating machine learning models, natural language processing, and predictive analytics.</p>
+                <a href="/services" class="inline-flex items-center text-sm font-semibold text-dark group-hover:text-purple-600 transition-colors">
+                    Explore <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-24 bg-dark relative overflow-hidden text-center">
+    <div class="absolute inset-0 bg-mesh-dark"></div>
+    <div class="container mx-auto px-6 lg:px-12 relative z-10 gsap-reveal">
+        <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">Ready to transform your ideas?</h2>
+        <p class="text-slate-300 text-lg mb-10 max-w-2xl mx-auto">Let's build something extraordinary together. Our team is ready to tackle your most complex challenges.</p>
+        <a href="/contact" class="magnetic inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-500 text-white font-medium text-lg hover:bg-brand-600 transition-all shadow-glow">
+            Let's Talk <i data-lucide="message-square" class="w-5 h-5 ml-2"></i>
+        </a>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

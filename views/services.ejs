@@ -1,0 +1,105 @@
+<%- include('partials/header') %>
+
+<section class="min-h-[60vh] pt-40 pb-20 relative bg-light flex flex-col justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-mesh opacity-50"></div>
+    <div class="container mx-auto px-6 lg:px-12 relative z-10 gsap-reveal">
+        <h1 class="text-6xl md:text-8xl font-display font-bold text-dark tracking-tight mb-6">Our <span class="text-gradient">Services</span></h1>
+        <p class="text-xl text-slate-600 max-w-2xl leading-relaxed">
+            We deliver end-to-end technology solutions, from high-performance web applications to scalable cloud infrastructure and intelligent AI systems.
+        </p>
+    </div>
+</section>
+
+<section class="py-24 bg-white">
+    <div class="container mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 gsap-stagger-container">
+
+            <!-- Service 1 -->
+            <div class="gsap-stagger-item group p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-soft transition-all duration-300 flex flex-col h-full">
+                <div class="w-16 h-16 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                    <i data-lucide="layout-template" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-2xl font-display font-bold text-dark mb-4">Web Architecture</h3>
+                <p class="text-slate-600 mb-8 flex-grow leading-relaxed">We build fast, secure, and accessible web experiences using modern frameworks like React, Next.js, and Node.js. Focus on performance, SEO, and seamless user interaction.</p>
+                <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-200 pt-6">
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500"></i> Single Page Applications</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500"></i> Progressive Web Apps</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-500"></i> E-commerce Platforms</li>
+                </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="gsap-stagger-item group p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-soft transition-all duration-300 flex flex-col h-full">
+                <div class="w-16 h-16 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                    <i data-lucide="smartphone" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-2xl font-display font-bold text-dark mb-4">Mobile Development</h3>
+                <p class="text-slate-600 mb-8 flex-grow leading-relaxed">Cross-platform and native mobile applications that provide intuitive user experiences and integrate flawlessly with backend systems.</p>
+                <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-200 pt-6">
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500"></i> React Native</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500"></i> Flutter</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500"></i> iOS & Android Native</li>
+                </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="gsap-stagger-item group p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-soft transition-all duration-300 flex flex-col h-full">
+                <div class="w-16 h-16 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                    <i data-lucide="cloud-cog" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-2xl font-display font-bold text-dark mb-4">Cloud & DevOps</h3>
+                <p class="text-slate-600 mb-8 flex-grow leading-relaxed">Design and implementation of highly available, scalable cloud architectures. CI/CD pipelines and infrastructure as code (IaC).</p>
+                <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-200 pt-6">
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-sky-500"></i> AWS / Azure / GCP</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-sky-500"></i> Docker & Kubernetes</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-sky-500"></i> Serverless Architecture</li>
+                </ul>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="gsap-stagger-item group p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-soft transition-all duration-300 flex flex-col h-full">
+                <div class="w-16 h-16 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                    <i data-lucide="brain-circuit" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-2xl font-display font-bold text-dark mb-4">AI Integration</h3>
+                <p class="text-slate-600 mb-8 flex-grow leading-relaxed">Leverage artificial intelligence to automate processes, gain insights from data, and build smarter applications using LLMs and machine learning models.</p>
+                <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-200 pt-6">
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-purple-500"></i> OpenAI API Integration</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-purple-500"></i> Predictive Analytics</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-purple-500"></i> Natural Language Processing</li>
+                </ul>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="gsap-stagger-item group p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-soft transition-all duration-300 flex flex-col h-full">
+                <div class="w-16 h-16 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                    <i data-lucide="database" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-2xl font-display font-bold text-dark mb-4">Data Engineering</h3>
+                <p class="text-slate-600 mb-8 flex-grow leading-relaxed">Build robust data pipelines, data warehouses, and analytics dashboards to transform raw data into actionable business intelligence.</p>
+                <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-200 pt-6">
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-rose-500"></i> Data Pipelines (ETL)</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-rose-500"></i> Big Data Analytics</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-rose-500"></i> Database Optimization</li>
+                </ul>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="gsap-stagger-item group p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-soft transition-all duration-300 flex flex-col h-full">
+                <div class="w-16 h-16 rounded-2xl bg-teal-100 text-teal-600 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                    <i data-lucide="shield-check" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-2xl font-display font-bold text-dark mb-4">Cybersecurity</h3>
+                <p class="text-slate-600 mb-8 flex-grow leading-relaxed">Comprehensive security audits, vulnerability assessments, and implementation of robust security protocols to protect your digital assets.</p>
+                <ul class="space-y-3 text-sm text-slate-700 font-medium border-t border-slate-200 pt-6">
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-teal-500"></i> Penetration Testing</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-teal-500"></i> Compliance (GDPR, HIPAA)</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-teal-500"></i> Secure Code Review</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepsis Technologies | Premium IT Agency</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            200: '#c7d2fe',
+                            300: '#a5b4fc',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#312e81',
+                            950: '#1e1b4b',
+                        },
+                        dark: '#0f172a',
+                        light: '#f8fafc',
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                        'glow': '0 0 20px rgba(99, 102, 241, 0.4)',
+                    },
+                    backgroundImage: {
+                        'mesh': 'radial-gradient(at 40% 20%, hsla(228,100%,74%,1) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%), radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%), radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%), radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%)',
+                        'mesh-dark': 'radial-gradient(at 40% 20%, hsla(228,100%,74%,0.15) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189,100%,56%,0.15) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,0.1) 0px, transparent 50%), radial-gradient(at 80% 50%, hsla(340,100%,76%,0.15) 0px, transparent 50%), radial-gradient(at 0% 100%, hsla(22,100%,77%,0.1) 0px, transparent 50%), radial-gradient(at 80% 100%, hsla(242,100%,70%,0.15) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(343,100%,76%,0.1) 0px, transparent 50%)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- NProgress -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+
+    <% if (currentRoute === '/contact') { %>
+        <!-- Google reCAPTCHA -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <% } %>
+
+    <style>
+        /* Base Styles */
+        body {
+            background-color: #f8fafc;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-dark {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* NProgress customization */
+        #nprogress .bar {
+            background: #6366f1 !important;
+            height: 3px !important;
+        }
+        #nprogress .peg {
+            box-shadow: 0 0 10px #6366f1, 0 0 5px #6366f1 !important;
+        }
+        #nprogress .spinner-icon {
+            border-top-color: #6366f1 !important;
+            border-left-color: #6366f1 !important;
+        }
+
+        /* Mobile Menu */
+        #mobile-menu {
+            transform: translateY(-100%);
+            transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        #mobile-menu.active {
+            transform: translateY(0);
+        }
+
+        /* Hide content during transition */
+        .barba-leave-active {
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        /* Utility */
+        .text-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #4338ca 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body data-barba="wrapper">
+
+    <!-- Navbar -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 py-4" id="navbar">
+        <div class="container mx-auto px-6 lg:px-12">
+            <nav class="glass rounded-full px-6 py-3 flex items-center justify-between shadow-soft">
+                <a href="/" class="flex items-center gap-2 group magnetic">
+                    <div class="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center text-white font-bold text-xl transition-transform group-hover:scale-110 group-hover:shadow-glow">
+                        N
+                    </div>
+                    <span class="font-display font-bold text-xl tracking-tight text-dark">Nepsis</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="/" class="text-sm font-medium hover:text-brand-600 transition-colors <%= currentRoute === '/' ? 'text-brand-600' : 'text-slate-600' %>">Home</a>
+                    <a href="/services" class="text-sm font-medium hover:text-brand-600 transition-colors <%= currentRoute === '/services' ? 'text-brand-600' : 'text-slate-600' %>">Services</a>
+                    <a href="/portfolio" class="text-sm font-medium hover:text-brand-600 transition-colors <%= currentRoute === '/portfolio' ? 'text-brand-600' : 'text-slate-600' %>">Portfolio</a>
+                    <a href="/about" class="text-sm font-medium hover:text-brand-600 transition-colors <%= currentRoute === '/about' ? 'text-brand-600' : 'text-slate-600' %>">About</a>
+                    <a href="/blog" class="text-sm font-medium hover:text-brand-600 transition-colors <%= currentRoute === '/blog' ? 'text-brand-600' : 'text-slate-600' %>">Blog</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="/contact" class="magnetic inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-dark text-white text-sm font-medium hover:bg-brand-600 transition-colors shadow-lg hover:shadow-brand-500/30">
+                        Start Project <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="menu-toggle" class="md:hidden flex items-center justify-center p-2 text-dark focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 glass bg-light/95 flex flex-col items-center justify-center gap-8 md:hidden">
+        <a href="/" class="text-2xl font-display font-bold <%= currentRoute === '/' ? 'text-brand-600' : 'text-dark' %>">Home</a>
+        <a href="/services" class="text-2xl font-display font-bold <%= currentRoute === '/services' ? 'text-brand-600' : 'text-dark' %>">Services</a>
+        <a href="/portfolio" class="text-2xl font-display font-bold <%= currentRoute === '/portfolio' ? 'text-brand-600' : 'text-dark' %>">Portfolio</a>
+        <a href="/about" class="text-2xl font-display font-bold <%= currentRoute === '/about' ? 'text-brand-600' : 'text-dark' %>">About</a>
+        <a href="/blog" class="text-2xl font-display font-bold <%= currentRoute === '/blog' ? 'text-brand-600' : 'text-dark' %>">Blog</a>
+        <a href="/contact" class="mt-4 px-8 py-4 rounded-full bg-brand-600 text-white font-medium text-lg">Start Project</a>
+    </div>
+
+    <!-- Main Content Container for Barba.js -->
+    <main data-barba="container" data-barba-namespace="<%= currentRoute.substring(1) || 'home' %>">
+        <div class="page-transition-overlay fixed inset-0 z-50 bg-dark pointer-events-none transform translate-y-full"></div>
