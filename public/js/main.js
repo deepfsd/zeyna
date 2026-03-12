@@ -129,13 +129,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Magnetic Buttons
     function initMagneticButtons() {
-        const magnets = document.querySelectorAll('.magnetic');
+        const magnets = document.querySelectorAll('.magnetic:not(.magnetic-initialized)');
 
         magnets.forEach((magnet) => {
+            magnet.classList.add('magnetic-initialized');
+            let position;
+
+            magnet.addEventListener('mouseenter', function() {
+                // Calculate position only once when entering the element
+                position = magnet.getBoundingClientRect();
+            });
+
             magnet.addEventListener('mousemove', function(e) {
-                const position = magnet.getBoundingClientRect();
-                const x = e.pageX - position.left - position.width / 2;
-                const y = e.pageY - position.top - position.height / 2;
+                if (!position) {
+                    position = magnet.getBoundingClientRect();
+                }
+
+                // Use the base position, ignoring current GSAP transforms
+                const x = e.clientX - position.left - position.width / 2;
+                const y = e.clientY - position.top - position.height / 2;
 
                 gsap.to(magnet, {
                     x: x * 0.3,
@@ -146,6 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             magnet.addEventListener('mouseleave', function() {
+                position = null; // Reset position for next hover
                 gsap.to(magnet, {
                     x: 0,
                     y: 0,
